@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: todo-list-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://todo-list-backend.onrender.com/api 
